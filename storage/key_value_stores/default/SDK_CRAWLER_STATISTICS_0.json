@@ -6,20 +6,14 @@
   "requestsFinishedPerMinute": 0,
   "requestMinDurationMillis": null,
   "requestMaxDurationMillis": 0,
-  "requestTotalFailedDurationMillis": 3200,
+  "requestTotalFailedDurationMillis": 21253,
   "requestTotalFinishedDurationMillis": 0,
-  "crawlerStartedAt": "2024-09-27T12:19:27.081Z",
-  "crawlerFinishedAt": "2024-09-27T12:20:35.644Z",
-  "statsPersistedAt": "2024-09-27T12:20:35.644Z",
-  "crawlerRuntimeMillis": 68723,
-  "crawlerLastStartTimestamp": 1727439566921,
+  "crawlerStartedAt": "2024-09-27T13:58:50.251Z",
+  "crawlerFinishedAt": "2024-09-27T14:00:25.030Z",
+  "statsPersistedAt": "2024-09-27T14:00:25.030Z",
+  "crawlerRuntimeMillis": 95040,
+  "crawlerLastStartTimestamp": 1727445529990,
   "requestRetryHistogram": [
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
     null,
     null,
     null,
@@ -27,16 +21,25 @@
     1
   ],
   "statsId": 0,
-  "requestAvgFailedDurationMillis": 3200,
+  "requestAvgFailedDurationMillis": 21253,
   "requestAvgFinishedDurationMillis": null,
-  "requestTotalDurationMillis": 3200,
+  "requestTotalDurationMillis": 21253,
   "requestsTotal": 1,
   "requestsWithStatusCode": {},
   "errors": {
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\http-crawler.ts:713:23": {
-      "missing error code": {
+    "file:///C:/Users/qasim_ali/Desktop/web-scrapper/node_modules/got/dist/source/core/index.js:183:21": {
+      "ETIMEDOUT": {
+        "RequestError": {
+          "connect ETIMEDOUT 64.227.134.208:80": {
+            "count": 1
+          }
+        }
+      }
+    },
+    "node:net:1606:16": {
+      "ETIMEDOUT": {
         "Error": {
-          "Detected a session error, rotating session... ": {
+          "connect ETIMEDOUT 64.227.134.208:80": {
             "count": 1
           }
         }
@@ -48,7 +51,34 @@
       "missing error code": {
         "Error": {
           "Detected a session error, rotating session... ": {
-            "count": 10
+            "count": 2
+          }
+        }
+      }
+    },
+    "file:///C:/Users/qasim_ali/Desktop/web-scrapper/node_modules/got/dist/source/core/index.js:667:107": {
+      "ETIMEDOUT": {
+        "RequestError": {
+          "connect ETIMEDOUT 103.156.75.41:8181": {
+            "count": 1
+          }
+        }
+      }
+    },
+    "node:net:1606:16": {
+      "ETIMEDOUT": {
+        "Error": {
+          "connect ETIMEDOUT _": {
+            "count": 2
+          }
+        }
+      }
+    },
+    "file:///C:/Users/qasim_ali/Desktop/web-scrapper/node_modules/got/dist/source/core/index.js:183:21": {
+      "ETIMEDOUT": {
+        "RequestError": {
+          "connect ETIMEDOUT 212.83.138.172:22138": {
+            "count": 1
           }
         }
       }

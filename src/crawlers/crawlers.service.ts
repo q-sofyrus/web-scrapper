@@ -10,19 +10,7 @@ import { HttpsProxyAgent } from 'https-proxy-agent';
 
 @Injectable()
 export class CrawlersService {
-  private proxyUrls = [
-    "http://103.86.135.34:5678",
-    "http://60.205.132.71:80"
-  ];
-
   private currentProxyIndex = 0;
-
-  private getNextProxy(): string {
-    const proxy = this.proxyUrls[this.currentProxyIndex];
-    this.currentProxyIndex = (this.currentProxyIndex + 1) % this.proxyUrls.length;
-    return proxy;
-  }
-
   async scrapeData(): Promise<void> {
     // CSV Writer Setup
     const writer = csvWriter({
@@ -45,28 +33,38 @@ export class CrawlersService {
 
     // Initialize a CheerioCrawler instance with concurrency set to 2
     const proxyConfiguration = new ProxyConfiguration({
-      proxyUrls: this.proxyUrls,
-    });
-    //  process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'; // Bypasses SSL certificate validation (for testing only)
+      proxyUrls: [
+          'http://64.227.134.208:80',
+          'http://103.156.75.41:8181',
+          'http://212.83.138.172:22138',
+          'http://217.112.80.252:80',
+          // Add more proxies as needed
+      ]
+  });
+  
+     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'; // Bypasses SSL certificate validation (for testing only)
 
     const crawler = new CheerioCrawler({
-      proxyConfiguration,
-      maxRequestRetries: 1,
-      requestHandlerTimeoutSecs: 120,
-      maxConcurrency: 2,
-      preNavigationHooks: [
-        async ({ request, session, proxyInfo, log }) => {
-          request.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
-            'Accept-Language': 'en-US,en;q=0.9',
-            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
-          };
-        },
-      ],
-
+      proxyConfiguration:new ProxyConfiguration({
+        proxyUrls: [
+        'http://64.227.134.208:80',
+        'http://103.156.75.41:8181',
+        'http://212.83.138.172:22138',
+        'http://217.112.80.252:80',
+        // Add more proxies as needed
+    ]}),
+   //requestTimeoutSecs: 60, // Increase timeout
+    maxRequestRetries: 3,
+    useSessionPool: true,
+    navigationTimeoutSecs:120,
+    // Overrides default Session pool configuration.
+    sessionPoolOptions: { maxPoolSize: 100 },
+    // Set to true if you want the crawler to save cookies per session,
+    // and set the cookie header to request automatically (default is true).
+    persistCookiesPerSession: true,
       async requestHandler({ request, $, log, proxyInfo }) {
         console.log(proxyInfo);
-        const proxyUrl = this.getNextProxy();
+        const proxyUrl = await proxyConfiguration.newUrl();
         log.info(`Using Proxy: ${proxyUrl}`);
         console.log('Scraping: ', request.url);
 
@@ -128,7 +126,7 @@ export class CrawlersService {
     });
 
     const urls = [
-      'https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search%5FArg=Group%20registration%20for%20a%20group%20of%20unpublished%20images&Search%5FCode=FT%2A&CNT=25&PID=pfqjTOgf8I4fGF7GRMUndkhi5bJG8Ib&SEQ=20240927072717&SID=1'
+      'https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=10&ti=1,1&Search%5FArg=Group%20registration%20for%20a%20group%20of%20unpublished%20images&Search%5FCode=FT%2A&CNT=25&PID=pfqjTOgf8I4fGF7GRMUndkhi5bJG8Ib&SEQ=20240927072717&SID=1'
      ];
 
     // Run the crawler
@@ -165,8 +163,14 @@ export class CrawlersService {
   // Method to check all proxies
   async checkProxies(): Promise<{ proxyUrl: string; time: number }[]> {
     const results: { proxyUrl: string; time: number }[] = [];
-
-    for (const proxyUrl of this.proxyUrls) {
+    const proxyUrls= [
+      'http://64.227.134.208:80',
+      'http://103.156.75.41:8181',
+      'http://212.83.138.172:22138',
+      'http://217.112.80.252:80',
+      // Add more proxies as needed
+  ]
+    for (const proxyUrl of proxyUrls) {
       const result = await this.testProxy(proxyUrl);
       if (result !== null) {
         results.push(result);
