@@ -11,8 +11,8 @@ export class CrawlersController {
     return await this.crawlersService.scrapeData();
   }
 
-  // @Get('test-proxies')
-  // async testProxies() {
-  //   return this.crawlersService.checkProxies();
-  // }
+  @Get('test-proxies')
+  async testProxies() {
+    return this.crawlersService.checkProxies();
+  }
 }

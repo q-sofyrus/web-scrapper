@@ -1,9 +1,0 @@
-{
-	"id": "ZqgOWh3PFRWxayZ",
-	"json": "{\"id\":\"ZqgOWh3PFRWxayZ\",\"url\":\"https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=2&ti=1,1&Search_Arg=Group%20registration%20for%20a%20group%20of%20unpublished%20images&Search_Code=FT%2A&CNT=100&PID=dummypid&SEQ=12345678912345&SID=0\",\"loadedUrl\":\"https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=2&ti=1,1&Search_Arg=Group%20registration%20for%20a%20group%20of%20unpublished%20images&Search_Code=FT%2A&CNT=100&PID=dummypid&SEQ=12345678912345&SID=0\",\"uniqueKey\":\"https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?CNT=100&PID=dummypid&SEQ=12345678912345&SID=0&Search_Arg=Group+registration+for+a+group+of+unpublished+images&Search_Code=FT*&ti=1%2C1&v1=2\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2024-09-26T07:01:42.999Z\"}",
-	"method": "GET",
-	"orderNo": null,
-	"retryCount": 0,
-	"uniqueKey": "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?CNT=100&PID=dummypid&SEQ=12345678912345&SID=0&Search_Arg=Group+registration+for+a+group+of+unpublished+images&Search_Code=FT*&ti=1%2C1&v1=2",
-	"url": "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=2&ti=1,1&Search_Arg=Group%20registration%20for%20a%20group%20of%20unpublished%20images&Search_Code=FT%2A&CNT=100&PID=dummypid&SEQ=12345678912345&SID=0"
-}

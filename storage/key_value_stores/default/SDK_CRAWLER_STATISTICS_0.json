@@ -1,46 +1,54 @@
 {
-  "requestsFinished": 10,
-  "requestsFailed": 0,
-  "requestsRetries": 2,
+  "requestsFinished": 0,
+  "requestsFailed": 1,
+  "requestsRetries": 1,
   "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 6,
-  "requestMinDurationMillis": 2854,
-  "requestMaxDurationMillis": 6759,
-  "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 33676,
-  "crawlerStartedAt": "2024-09-26T07:01:32.497Z",
-  "crawlerFinishedAt": "2024-09-26T07:03:13.426Z",
-  "statsPersistedAt": "2024-09-26T07:03:13.426Z",
-  "crawlerRuntimeMillis": 101333,
-  "crawlerLastStartTimestamp": 1727334092093,
+  "requestsFinishedPerMinute": 0,
+  "requestMinDurationMillis": null,
+  "requestMaxDurationMillis": 0,
+  "requestTotalFailedDurationMillis": 3200,
+  "requestTotalFinishedDurationMillis": 0,
+  "crawlerStartedAt": "2024-09-27T12:19:27.081Z",
+  "crawlerFinishedAt": "2024-09-27T12:20:35.644Z",
+  "statsPersistedAt": "2024-09-27T12:20:35.644Z",
+  "crawlerRuntimeMillis": 68723,
+  "crawlerLastStartTimestamp": 1727439566921,
   "requestRetryHistogram": [
-    8,
-    1,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
     null,
     1
   ],
   "statsId": 0,
-  "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": 3368,
-  "requestTotalDurationMillis": 33676,
-  "requestsTotal": 10,
+  "requestAvgFailedDurationMillis": 3200,
+  "requestAvgFinishedDurationMillis": null,
+  "requestTotalDurationMillis": 3200,
+  "requestsTotal": 1,
   "requestsWithStatusCode": {},
-  "errors": {},
-  "retryErrors": {
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\src\\crawlers\\crawlers.service.ts:36:55": {
+  "errors": {
+    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\http-crawler.ts:713:23": {
       "missing error code": {
-        "TypeError": {
-          "Cannot read properties of null (reading 'match')": {
-            "count": 2
+        "Error": {
+          "Detected a session error, rotating session... ": {
+            "count": 1
           }
         }
       }
-    },
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@apify\\src\\index.ts:88:74": {
+    }
+  },
+  "retryErrors": {
+    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\http-crawler.ts:713:23": {
       "missing error code": {
         "Error": {
-          "request timed out after 30 seconds.": {
-            "count": 2
+          "Detected a session error, rotating session... ": {
+            "count": 10
           }
         }
       }

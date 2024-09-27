@@ -1,306 +1,9 @@
 {
-  "usableSessionsCount": 14,
-  "retiredSessionsCount": 0,
+  "usableSessionsCount": 1,
+  "retiredSessionsCount": 10,
   "sessions": [
     {
-      "id": "session_aSgjJagp3E",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:31:39.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:01:39.751Z",
-            "lastAccessed": "2024-09-26T07:01:39.751Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:51:33.058Z",
-      "createdAt": "2024-09-26T07:01:33.057Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_iWstxRLnja",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:31:42.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:01:42.978Z",
-            "lastAccessed": "2024-09-26T07:01:42.978Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:51:39.851Z",
-      "createdAt": "2024-09-26T07:01:39.851Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_GqrEP7jQUh",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:31:46.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:01:46.074Z",
-            "lastAccessed": "2024-09-26T07:01:46.074Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:51:43.016Z",
-      "createdAt": "2024-09-26T07:01:43.016Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 1
-    },
-    {
-      "id": "session_csCzK7XpTQ",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:31:49.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:01:49.109Z",
-            "lastAccessed": "2024-09-26T07:01:49.109Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:51:46.147Z",
-      "createdAt": "2024-09-26T07:01:46.147Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_C5aTMGdFMt",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:31:52.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:01:52.284Z",
-            "lastAccessed": "2024-09-26T07:01:52.284Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:51:49.139Z",
-      "createdAt": "2024-09-26T07:01:49.139Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_qzezThjyQM",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:31:55.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:01:55.154Z",
-            "lastAccessed": "2024-09-26T07:01:55.154Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:51:52.317Z",
-      "createdAt": "2024-09-26T07:01:52.317Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_2yd9iqOq52",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:31:58.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:01:58.132Z",
-            "lastAccessed": "2024-09-26T07:01:58.132Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:51:55.183Z",
-      "createdAt": "2024-09-26T07:01:55.183Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_lISQe4gYD5",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:32:01.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:02:01.040Z",
-            "lastAccessed": "2024-09-26T07:02:01.040Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:51:58.189Z",
-      "createdAt": "2024-09-26T07:01:58.189Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_DCx7geVizu",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:32:04.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:02:04.065Z",
-            "lastAccessed": "2024-09-26T07:02:04.065Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:52:01.071Z",
-      "createdAt": "2024-09-26T07:02:01.071Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_E3h3TVjr1F",
+      "id": "session_DTsf4wacTF",
       "cookieJar": {
         "version": "tough-cookie@4.1.4",
         "storeType": "MemoryCookieStore",
@@ -313,14 +16,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:52:04.137Z",
-      "createdAt": "2024-09-26T07:02:04.137Z",
-      "usageCount": 1,
+      "expiresAt": "2024-09-27T13:09:27.473Z",
+      "createdAt": "2024-09-27T12:19:27.473Z",
+      "usageCount": 3,
       "maxUsageCount": 50,
-      "errorScore": 1
+      "errorScore": 7
     },
     {
-      "id": "session_HqukxVBGQH",
+      "id": "session_TvWejW4FPH",
       "cookieJar": {
         "version": "tough-cookie@4.1.4",
         "storeType": "MemoryCookieStore",
@@ -333,110 +36,191 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:52:34.226Z",
-      "createdAt": "2024-09-26T07:02:34.226Z",
+      "expiresAt": "2024-09-27T13:09:36.884Z",
+      "createdAt": "2024-09-27T12:19:36.884Z",
+      "usageCount": 3,
+      "maxUsageCount": 50,
+      "errorScore": 7
+    },
+    {
+      "id": "session_fQxAK81dly",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-09-27T13:09:39.507Z",
+      "createdAt": "2024-09-27T12:19:39.507Z",
+      "usageCount": 3,
+      "maxUsageCount": 50,
+      "errorScore": 7
+    },
+    {
+      "id": "session_tADy4okYcP",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-09-27T13:09:42.049Z",
+      "createdAt": "2024-09-27T12:19:42.049Z",
+      "usageCount": 3,
+      "maxUsageCount": 50,
+      "errorScore": 7
+    },
+    {
+      "id": "session_b18Usp3iqa",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-09-27T13:09:44.412Z",
+      "createdAt": "2024-09-27T12:19:44.412Z",
+      "usageCount": 3,
+      "maxUsageCount": 50,
+      "errorScore": 7
+    },
+    {
+      "id": "session_T58xHuDqrN",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-09-27T13:09:52.180Z",
+      "createdAt": "2024-09-27T12:19:52.180Z",
+      "usageCount": 3,
+      "maxUsageCount": 50,
+      "errorScore": 7
+    },
+    {
+      "id": "session_gqlvscUSBh",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-09-27T13:09:54.932Z",
+      "createdAt": "2024-09-27T12:19:54.932Z",
+      "usageCount": 3,
+      "maxUsageCount": 50,
+      "errorScore": 7
+    },
+    {
+      "id": "session_RyZYCPHW8X",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-09-27T13:09:59.776Z",
+      "createdAt": "2024-09-27T12:19:59.776Z",
+      "usageCount": 3,
+      "maxUsageCount": 50,
+      "errorScore": 7
+    },
+    {
+      "id": "session_bnZ7lkGqp6",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-09-27T13:10:09.555Z",
+      "createdAt": "2024-09-27T12:20:09.555Z",
+      "usageCount": 3,
+      "maxUsageCount": 50,
+      "errorScore": 7
+    },
+    {
+      "id": "session_Rj6g4CuogH",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-09-27T13:10:27.219Z",
+      "createdAt": "2024-09-27T12:20:27.219Z",
+      "usageCount": 3,
+      "maxUsageCount": 50,
+      "errorScore": 7
+    },
+    {
+      "id": "session_zJGApF2FMP",
+      "cookieJar": {
+        "version": "tough-cookie@4.1.4",
+        "storeType": "MemoryCookieStore",
+        "rejectPublicSuffixes": true,
+        "enableLooseMode": false,
+        "allowSpecialUseDomain": true,
+        "prefixSecurity": "silent",
+        "cookies": []
+      },
+      "userData": {},
+      "maxErrorScore": 3,
+      "errorScoreDecrement": 0.5,
+      "expiresAt": "2024-09-27T13:10:32.374Z",
+      "createdAt": "2024-09-27T12:20:32.374Z",
       "usageCount": 1,
       "maxUsageCount": 50,
       "errorScore": 1
-    },
-    {
-      "id": "session_UGFZAfjgYn",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:33:07.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:03:07.184Z",
-            "lastAccessed": "2024-09-26T07:03:07.184Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:53:04.314Z",
-      "createdAt": "2024-09-26T07:03:04.314Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
-    },
-    {
-      "id": "session_Hm9mvwovmk",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:33:10.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:03:10.230Z",
-            "lastAccessed": "2024-09-26T07:03:10.230Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:53:07.220Z",
-      "createdAt": "2024-09-26T07:03:07.220Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 1
-    },
-    {
-      "id": "session_Na9jjiiFws",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": [
-          {
-            "key": "ILS_NSC_SID",
-            "value": "ffffffff8f9bf14545525d5f4f58455e445a4a42378b",
-            "expires": "2024-09-26T07:33:13.000Z",
-            "domain": "cocatalog.loc.gov",
-            "path": "/",
-            "secure": true,
-            "httpOnly": true,
-            "hostOnly": true,
-            "creation": "2024-09-26T07:03:13.274Z",
-            "lastAccessed": "2024-09-26T07:03:13.274Z"
-          }
-        ]
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-26T07:53:10.288Z",
-      "createdAt": "2024-09-26T07:03:10.288Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 0
     }
   ]
 }
