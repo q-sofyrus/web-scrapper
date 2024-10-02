@@ -1,18 +1,16 @@
-/*eslint-disable prettier/prettier*/ //  using proxies
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
-import { CheerioCrawler } from '@crawlee/cheerio';
-import { ProxyConfiguration } from '@crawlee/core'; // Import Proxy Configuration
+import { PlaywrightCrawler, ProxyConfiguration } from 'crawlee';
 import * as fs from 'fs';
 import * as path from 'path';
 import * as csvWriter from 'csv-write-stream';
 import axios from 'axios';
 import { HttpsProxyAgent } from 'https-proxy-agent';
-
 @Injectable()
 export class CrawlersService {
   private currentProxyIndex = 0;
+
   async scrapeData(): Promise<void> {
-    // CSV Writer Setup
     const writer = csvWriter({
       headers: [
         'Name(s)',
@@ -30,69 +28,56 @@ export class CrawlersService {
     const filePath = path.join(__dirname, 'data.csv');
     const writeStream = fs.createWriteStream(filePath);
     writer.pipe(writeStream);
+ 
+    const crawler = new PlaywrightCrawler({
+      useSessionPool: true,
+      sessionPoolOptions: { maxPoolSize: 100 },
+      persistCookiesPerSession: true,
 
-    // Initialize a CheerioCrawler instance with concurrency set to 2
-    const proxyConfiguration = new ProxyConfiguration({
-      proxyUrls: [
-          'http://64.227.134.208:80',
-          'http://103.156.75.41:8181',
-          'http://212.83.138.172:22138',
-          'http://217.112.80.252:80',
-          // Add more proxies as needed
-      ]
-  });
-  
-     process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0'; // Bypasses SSL certificate validation (for testing only)
+      async requestHandler({ page, request, log }) {
+        console.log('Scraping:', request.url);
+        await page.goto(request.url, { timeout: 120000 }); // Timeout after 10 seconds
 
-    const crawler = new CheerioCrawler({
-      proxyConfiguration:new ProxyConfiguration({
-        proxyUrls: [
-        'http://64.227.134.208:80',
-        'http://103.156.75.41:8181',
-        'http://212.83.138.172:22138',
-        'http://217.112.80.252:80',
-        // Add more proxies as needed
-    ]}),
-   //requestTimeoutSecs: 60, // Increase timeout
-    maxRequestRetries: 3,
-    useSessionPool: true,
-    navigationTimeoutSecs:120,
-    // Overrides default Session pool configuration.
-    sessionPoolOptions: { maxPoolSize: 100 },
-    // Set to true if you want the crawler to save cookies per session,
-    // and set the cookie header to request automatically (default is true).
-    persistCookiesPerSession: true,
-      async requestHandler({ request, $, log, proxyInfo }) {
-        console.log(proxyInfo);
-        const proxyUrl = await proxyConfiguration.newUrl();
-        log.info(`Using Proxy: ${proxyUrl}`);
-        console.log('Scraping: ', request.url);
+        const name = (await page.textContent('th:has-text("Name") + td'))?.trim() || 'N/A';
+        const element = await page.$('th:has-text("Rights and Permissions") + td');
+        const rightsAndPermissions = element ? (await element.textContent())?.trim() || 'N/A' : 'N/A';
 
-        // Extract the required data
-        const name = $('th:contains("Name")').next('td').text().trim() || 'N/A';
-        const rightsAndPermissionsHtml = $('th:contains("Rights and Permissions")').next('td').html();
-        let email = 'N/A';
+        const emailRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
+        const emailMatch = rightsAndPermissions.match(emailRegex);
+        const email = emailMatch ? emailMatch[0] : 'N/A';
 
-        const rightsAndPermissions = $('th:contains("Rights and Permissions")').next('td').text().trim() || 'N/A';
+        const registrationNumber = (await page.textContent('th:has-text("Registration Number") + td'))?.trim() || 'N/A';
+        const title = (await page.textContent('th:has-text("Title:") + td'))?.trim() || 'N/A';
+        const description = (await page.textContent('th:has-text("Description") + td'))?.trim() || 'N/A';
+        const copyrightClaimant = (await page.textContent('th:has-text("Copyright Claimant") + td'))?.trim() || 'N/A';
+        const dateOfCreation = (await page.textContent('th:has-text("Date of Creation") + td'))?.trim() || 'N/A';
+        console.log("before photo exists...");
 
-        const emailMatch = rightsAndPermissionsHtml.match(/data-cfemail="([^"]+)"/);
-        if (emailMatch && emailMatch[1]) {
-          email = this.decodeEmail(emailMatch[1]);
-        } else {
-          const plainEmailMatch = rightsAndPermissionsHtml.match(/<a[^>]+>(.*?)<\/a>/);
-          if (plainEmailMatch) {
-            email = plainEmailMatch[1].replace(/&#xa0;/g, '').trim();
+        const photographs = await page.evaluate(() => {
+          console.log("0before photo exists...");
+          
+          const thElement = Array.from(document.querySelectorAll('th')).find(th => th.textContent.trim() === 'Photographs:');
+          console.log("1before photo exists...");
+          if (!thElement) return 'N/A';
+         
+          const photographsList = [];
+          console.log("2photo exists...");
+          let currentRow = thElement.parentElement.nextElementSibling;
+          
+          while (currentRow) {
+            const tdElement = currentRow.querySelector('td[dir="ltr"]');
+            
+            // Scan both the direct td element and any nested elements for the term 'photographs'
+            if (tdElement && (tdElement.textContent.includes('photographs') || tdElement.innerHTML.includes('photographs'))) {
+              photographsList.push(tdElement.textContent.trim());
+            } 
+        
+            currentRow = currentRow.nextElementSibling;
           }
-        }
-
-        const registrationNumber = $('th:contains("Registration Number")').next('td').text().trim() || 'N/A';
-        const title = $('th').filter(function () {
-          return $(this).text().trim() === 'Title:';
-        }).next('td').text().trim() || 'N/A';
-        const description = $('th:contains("Description")').next('td').text().trim() || 'N/A';
-        const copyrightClaimant = $('th:contains("Copyright Claimant")').next('td').text().trim() || 'N/A';
-        const dateOfCreation = $('th:contains("Date of Creation")').next('td').text().trim() || 'N/A';
-        const photographs = $('th:contains("Photographs")').next('td').text().trim() || 'N/A';
+        
+          return photographsList.length > 0 ? photographsList.join(', ') : 'N/A';
+        });
+        
 
         log.info(`Extracted Data:
           Name(s): ${name}
@@ -106,7 +91,6 @@ export class CrawlersService {
           Photographs: ${photographs}
         `);
 
-        // Write the data to the CSV file
         writer.write({
           'Name(s)': name,
           'Email': email,
@@ -125,25 +109,23 @@ export class CrawlersService {
       },
     });
 
-    const urls = [
-      'https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=10&ti=1,1&Search%5FArg=Group%20registration%20for%20a%20group%20of%20unpublished%20images&Search%5FCode=FT%2A&CNT=25&PID=pfqjTOgf8I4fGF7GRMUndkhi5bJG8Ib&SEQ=20240927072717&SID=1'
-     ];
+    const urls = [];
+    // for (let v1 = 1; v1 <= 50; v1++) {
+    //     urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=${v1}&ti=1,1&Search%5FArg=Group%20registration%20for%20a%20group%20of%20unpublished%20images&Search%5FCode=FT%2A&CNT=100&PID=dummypid&SEQ=1234567891234&SID=1`);
+    // }
 
-    // Run the crawler
-    await crawler.run(urls);
+    await crawler.run(['https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=2&ti=1,1&Search%5FArg=Group%20registration%20for%20a%20group%20of%20unpublished%20images&Search%5FCode=FT%2A&CNT=100&PID=dummypid&SEQ=1234567891234&SID=1']);
 
-    // Close the CSV writer once scraping is complete
     writer.end(() => {
       console.log(`Scraping completed and data saved to ${filePath}`);
     });
   }
 
   private decodeEmail(encoded: string): string {
-    const r = parseInt(encoded.substr(0, 2), 16);
-    return encoded.substr(2).replace(/[0-9a-f]{2}/g, (c) => String.fromCharCode(parseInt(c, 16) ^ r));
+    const r = parseInt(encoded.substring(0, 2), 16);
+    return encoded.substring(2).replace(/[0-9a-f]{2}/g, (c) => String.fromCharCode(parseInt(c, 16) ^ r));
   }
 
-  // Method to test proxies
   async testProxy(proxyUrl: string): Promise<{ proxyUrl: string; time: number } | null> {
     const startTime = Date.now();
 
@@ -160,16 +142,15 @@ export class CrawlersService {
     }
   }
 
-  // Method to check all proxies
   async checkProxies(): Promise<{ proxyUrl: string; time: number }[]> {
     const results: { proxyUrl: string; time: number }[] = [];
-    const proxyUrls= [
+    const proxyUrls = [
       'http://64.227.134.208:80',
       'http://103.156.75.41:8181',
       'http://212.83.138.172:22138',
       'http://217.112.80.252:80',
-      // Add more proxies as needed
-  ]
+    ];
+
     for (const proxyUrl of proxyUrls) {
       const result = await this.testProxy(proxyUrl);
       if (result !== null) {

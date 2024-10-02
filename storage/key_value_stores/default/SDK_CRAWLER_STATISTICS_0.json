@@ -1,87 +1,29 @@
 {
-  "requestsFinished": 0,
-  "requestsFailed": 1,
-  "requestsRetries": 1,
+  "requestsFinished": 1,
+  "requestsFailed": 0,
+  "requestsRetries": 0,
   "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 0,
-  "requestMinDurationMillis": null,
-  "requestMaxDurationMillis": 0,
-  "requestTotalFailedDurationMillis": 21253,
-  "requestTotalFinishedDurationMillis": 0,
-  "crawlerStartedAt": "2024-09-27T13:58:50.251Z",
-  "crawlerFinishedAt": "2024-09-27T14:00:25.030Z",
-  "statsPersistedAt": "2024-09-27T14:00:25.030Z",
-  "crawlerRuntimeMillis": 95040,
-  "crawlerLastStartTimestamp": 1727445529990,
+  "requestsFinishedPerMinute": 4,
+  "requestMinDurationMillis": 13683,
+  "requestMaxDurationMillis": 13683,
+  "requestTotalFailedDurationMillis": 0,
+  "requestTotalFinishedDurationMillis": 13683,
+  "crawlerStartedAt": "2024-10-02T07:39:25.950Z",
+  "crawlerFinishedAt": "2024-10-02T07:39:40.495Z",
+  "statsPersistedAt": "2024-10-02T07:39:40.495Z",
+  "crawlerRuntimeMillis": 15703,
+  "crawlerLastStartTimestamp": 1727854764792,
   "requestRetryHistogram": [
-    null,
-    null,
-    null,
-    null,
     1
   ],
   "statsId": 0,
-  "requestAvgFailedDurationMillis": 21253,
-  "requestAvgFinishedDurationMillis": null,
-  "requestTotalDurationMillis": 21253,
+  "requestAvgFailedDurationMillis": null,
+  "requestAvgFinishedDurationMillis": 13683,
+  "requestTotalDurationMillis": 13683,
   "requestsTotal": 1,
-  "requestsWithStatusCode": {},
-  "errors": {
-    "file:///C:/Users/qasim_ali/Desktop/web-scrapper/node_modules/got/dist/source/core/index.js:183:21": {
-      "ETIMEDOUT": {
-        "RequestError": {
-          "connect ETIMEDOUT 64.227.134.208:80": {
-            "count": 1
-          }
-        }
-      }
-    },
-    "node:net:1606:16": {
-      "ETIMEDOUT": {
-        "Error": {
-          "connect ETIMEDOUT 64.227.134.208:80": {
-            "count": 1
-          }
-        }
-      }
-    }
+  "requestsWithStatusCode": {
+    "200": 1
   },
-  "retryErrors": {
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\http-crawler.ts:713:23": {
-      "missing error code": {
-        "Error": {
-          "Detected a session error, rotating session... ": {
-            "count": 2
-          }
-        }
-      }
-    },
-    "file:///C:/Users/qasim_ali/Desktop/web-scrapper/node_modules/got/dist/source/core/index.js:667:107": {
-      "ETIMEDOUT": {
-        "RequestError": {
-          "connect ETIMEDOUT 103.156.75.41:8181": {
-            "count": 1
-          }
-        }
-      }
-    },
-    "node:net:1606:16": {
-      "ETIMEDOUT": {
-        "Error": {
-          "connect ETIMEDOUT _": {
-            "count": 2
-          }
-        }
-      }
-    },
-    "file:///C:/Users/qasim_ali/Desktop/web-scrapper/node_modules/got/dist/source/core/index.js:183:21": {
-      "ETIMEDOUT": {
-        "RequestError": {
-          "connect ETIMEDOUT 212.83.138.172:22138": {
-            "count": 1
-          }
-        }
-      }
-    }
-  }
+  "errors": {},
+  "retryErrors": {}
 }

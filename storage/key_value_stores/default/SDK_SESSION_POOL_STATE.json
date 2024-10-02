@@ -1,9 +1,9 @@
 {
-  "usableSessionsCount": 3,
-  "retiredSessionsCount": 2,
+  "usableSessionsCount": 2,
+  "retiredSessionsCount": 0,
   "sessions": [
     {
-      "id": "session_7wwyrYxH20",
+      "id": "session_w89DV84aOk",
       "cookieJar": {
         "version": "tough-cookie@4.1.4",
         "storeType": "MemoryCookieStore",
@@ -16,14 +16,14 @@
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-27T14:48:51.347Z",
-      "createdAt": "2024-09-27T13:58:51.347Z",
-      "usageCount": 3,
+      "expiresAt": "2024-10-02T08:29:26.369Z",
+      "createdAt": "2024-10-02T07:39:26.369Z",
+      "usageCount": 0,
       "maxUsageCount": 50,
-      "errorScore": 7
+      "errorScore": 0
     },
     {
-      "id": "session_ryN99Ck5bo",
+      "id": "session_B6qJyXgFGI",
       "cookieJar": {
         "version": "tough-cookie@4.1.4",
         "storeType": "MemoryCookieStore",
@@ -31,76 +31,60 @@
         "enableLooseMode": false,
         "allowSpecialUseDomain": true,
         "prefixSecurity": "silent",
-        "cookies": []
+        "cookies": [
+          {
+            "key": "ILS_NSC_SID",
+            "value": "ffffffff8f9bf14245525d5f4f58455e445a4a42378b",
+            "expires": "2024-10-02T08:09:34.469Z",
+            "domain": "cocatalog.loc.gov",
+            "path": "/",
+            "secure": true,
+            "httpOnly": true,
+            "hostOnly": true,
+            "creation": "2024-10-02T07:39:36.492Z",
+            "lastAccessed": "2024-10-02T07:39:36.492Z"
+          },
+          {
+            "key": "AMCV_0D15148954E6C5100A4C98BC%40AdobeOrg",
+            "value": "179643557%7CMCIDTS%7C19999%7CvVersion%7C5.5.0",
+            "expires": "2025-11-06T07:39:35.842Z",
+            "domain": "loc.gov",
+            "path": "/",
+            "secure": true,
+            "hostOnly": false,
+            "creation": "2024-10-02T07:39:36.500Z",
+            "lastAccessed": "2024-10-02T07:39:36.500Z"
+          },
+          {
+            "key": "s_plt",
+            "value": "NaN",
+            "expires": "2024-10-02T08:29:36.484Z",
+            "domain": "loc.gov",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-10-02T07:39:36.525Z",
+            "lastAccessed": "2024-10-02T07:39:36.525Z"
+          },
+          {
+            "key": "s_pltp",
+            "value": "undefined",
+            "expires": "2024-10-02T08:29:36.484Z",
+            "domain": "loc.gov",
+            "path": "/",
+            "hostOnly": false,
+            "creation": "2024-10-02T07:39:36.532Z",
+            "lastAccessed": "2024-10-02T07:39:36.532Z"
+          }
+        ]
       },
       "userData": {},
       "maxErrorScore": 3,
       "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-27T14:48:55.371Z",
-      "createdAt": "2024-09-27T13:58:55.371Z",
-      "usageCount": 1,
+      "expiresAt": "2024-10-02T08:29:26.385Z",
+      "createdAt": "2024-10-02T07:39:26.385Z",
+      "usageCount": 2,
       "maxUsageCount": 50,
-      "errorScore": 1
-    },
-    {
-      "id": "session_XtZNjLzTvw",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-27T14:49:26.073Z",
-      "createdAt": "2024-09-27T13:59:26.073Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 1
-    },
-    {
-      "id": "session_Q0zfJfU4KW",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-27T14:49:47.209Z",
-      "createdAt": "2024-09-27T13:59:47.209Z",
-      "usageCount": 3,
-      "maxUsageCount": 50,
-      "errorScore": 7
-    },
-    {
-      "id": "session_nXIwjqvDFd",
-      "cookieJar": {
-        "version": "tough-cookie@4.1.4",
-        "storeType": "MemoryCookieStore",
-        "rejectPublicSuffixes": true,
-        "enableLooseMode": false,
-        "allowSpecialUseDomain": true,
-        "prefixSecurity": "silent",
-        "cookies": []
-      },
-      "userData": {},
-      "maxErrorScore": 3,
-      "errorScoreDecrement": 0.5,
-      "expiresAt": "2024-09-27T14:50:03.557Z",
-      "createdAt": "2024-09-27T14:00:03.557Z",
-      "usageCount": 1,
-      "maxUsageCount": 50,
-      "errorScore": 1
+      "errorScore": 0
     }
   ]
 }
