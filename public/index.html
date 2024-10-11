@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper Frontend</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Web Scraper Solution</h1>
+        <form id="scraperForm">
+            <!-- URL Input -->
+            <div class="form-group">
+                <label for="urlInput">Target URL</label>
+                <input type="text" id="urlInput" name="url" placeholder="Enter target URL" required>
+            </div>
+            <!-- Category Input -->
+            <div class="form-group">
+                <label for="categoryInput">Category</label>
+                <input type="text" id="categoryInput" name="category" placeholder="Enter category" required>
+            </div>
+            <!-- Alphabet Input -->
+            <div class="form-group">
+                <label for="alphabetInput">Alphabet</label>
+                <input type="text" id="alphabetInput" name="alphabet" placeholder="Enter alphabet (e.g., A-Z)" required>
+            </div>
+            <!-- Total Number of Records Input -->
+            <div class="form-group">
+                <label for="totalRecordsInput">Total No. of Records</label>
+                <input type="number" id="totalRecordsInput" name="totalRecords" placeholder="Enter total no. of records" required>
+            </div>
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

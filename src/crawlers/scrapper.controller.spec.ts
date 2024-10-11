@@ -1,16 +1,16 @@
 /* eslint-disable prettier/prettier */
 import { Test, TestingModule } from '@nestjs/testing';
-import { CrawlersController } from './crawlers.controller';
+import { ScrapperController } from './scrapper.controller';
 
-describe('CrawlersController', () => {
-  let controller: CrawlersController;
+describe('ScrapperController', () => {
+  let controller: ScrapperController;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      controllers: [CrawlersController],
+      controllers: [ScrapperController],
     }).compile();
 
-    controller = module.get<CrawlersController>(CrawlersController);
+    controller = module.get<ScrapperController>(ScrapperController);
   });
 
   it('should be defined', () => {

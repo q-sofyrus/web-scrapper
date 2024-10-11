@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper Frontend</title>
+     <style>
+        /* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #add8e6, #98fb98);
+}
+
+/* Container styling */
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 1.5rem;
+    color: #2e8b57;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+ select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+button:hover {
+    background-color: #3cb371;
+}
+.site{
+    font-size: large;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+       
+        <h1>Web Scraper  for  <br>
+         <span class="site">www.copyrightable.com</span></h1>
+        <form id="scraperForm">
+            <!-- Category Input -->
+            <div class="form-group">
+                <label for="categoryInput">Category</label>
+                <select id="categoryInput" name="category" required>
+                    <option value="" disabled selected>Select a category</option>
+                    <option value="Sound Recording">Sound Recording</option>
+                    <option value="Serial">Serial</option>
+                    <option value="Cancelled">Cancelled</option>
+                    <option value="Computer File">Computer File</option>
+                    <option value="Dramatic Work And Music And Choreography">Dramatic Work And Music And Choreography</option>
+                    <option value="Visual Material Registration">Visual Material</option>
+                    <option value="Motion Picture">Motion Picture</option>
+                    <option value="Music">Music</option>
+                    <option value="Sound Recording And Music">Sound Recording And Music</option>
+                    <option value="Text">Text</option>
+                    <option value="Kit">Kit</option>
+                    <option value="Sound Recording And Text">Sound Recording And Text</option>
+                </select>
+             </div>
+            <!-- Alphabet Input -->
+            <div class="form-group">
+                <label for="alphabetInput">Alphabet</label>
+                <input type="text" id="alphabetInput" name="alphabet" placeholder="Enter alphabet (e.g., a-z)" required>
+            </div>
+            <!-- Total Number of Records Input -->
+            <div class="form-group">
+                <label for="totalRecordsInput">Total No. of Records</label>
+                <input type="number" id="totalRecordsInput" name="totalRecords" placeholder="Enter total no. of records(x10)" required>
+            </div>
+            <!-- Submit Button -->
+            <div class="form-group">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js">
+        </script>
+
+    
+</body>
+</html>
