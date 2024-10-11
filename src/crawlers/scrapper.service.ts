@@ -9,7 +9,7 @@ import { createObjectCsvWriter } from 'csv-writer';
 
 @Injectable()
 export class ScraperService {
-  private filePath = path.join('', 'sound-recording-a.csv');
+  private filePath = path.join('', 'sound-recording-b.csv');
   private csvWriter = createObjectCsvWriter({
     append: true,
     path: this.filePath,
@@ -49,7 +49,7 @@ export class ScraperService {
     const crawler = new PlaywrightCrawler({
       useSessionPool: true,
       sessionPoolOptions: { maxPoolSize: 100 },
-      //proxyConfiguration,
+      proxyConfiguration,
       persistCookiesPerSession: true,
       maxRequestRetries: 50,
       maxConcurrency: 10,
@@ -159,8 +159,8 @@ export class ScraperService {
       },
     });
     const urls=[]
-    for (let index = 1; index <= 10; index++) {
-    urls.push(`https://www.copyrightable.com/search/category/sound-recording-registration/page-a-${index}`);
+    for (let index = 306; index <= 500; index++) {
+    urls.push(`https://www.copyrightable.com/search/category/sound-recording-registration/page-b-${index}`);
     
     }
     console.log('total links:',urls.length);

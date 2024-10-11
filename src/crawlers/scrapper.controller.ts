@@ -9,7 +9,7 @@ export class ScrapperController {
   @Get('start')
   async scrape() {
     await this.scrapperService.scrapeData();
-    return 'records scrapped'
+    return 'records scrapped successfullty!'
   }
 
   @Get('test-proxies')

@@ -1,0 +1,9 @@
+{
+	"id": "uKtztp5deyLScrN",
+	"json": "{\"id\":\"uKtztp5deyLScrN\",\"url\":\"https://www.copyrightable.com/search/category/sound-recording-registration/page-b-308\",\"loadedUrl\":\"https://www.copyrightable.com/search/category/sound-recording-registration/page-b-308\",\"uniqueKey\":\"https://www.copyrightable.com/search/category/sound-recording-registration/page-b-308\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":2,\"errorMessages\":[\"Error: requestHandler timed out after 60 seconds.\\n    at Timeout._onTimeout (C:\\\\Users\\\\Moon Computers\\\\Desktop\\\\web-scrapper\\\\node_modules\\\\@apify\\\\src\\\\index.ts:88:74)\\n    at listOnTimeout (node:internal/timers:581:17)\\n    at process.processTimers (node:internal/timers:519:7)\",\"Error: requestHandler timed out after 60 seconds.\\n    at Timeout._onTimeout (C:\\\\Users\\\\Moon Computers\\\\Desktop\\\\web-scrapper\\\\node_modules\\\\@apify\\\\src\\\\index.ts:88:74)\\n    at listOnTimeout (node:internal/timers:581:17)\\n    at process.processTimers (node:internal/timers:519:7)\"],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":5}}}",
+	"method": "GET",
+	"orderNo": 1728659019794,
+	"retryCount": 2,
+	"uniqueKey": "https://www.copyrightable.com/search/category/sound-recording-registration/page-b-308",
+	"url": "https://www.copyrightable.com/search/category/sound-recording-registration/page-b-308"
+}

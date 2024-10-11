@@ -1,52 +1,51 @@
 {
-  "requestsFinished": 0,
+  "requestsFinished": 3,
   "requestsFailed": 0,
   "requestsRetries": 0,
   "requestsFailedPerMinute": 0,
   "requestsFinishedPerMinute": 0,
-  "requestMinDurationMillis": null,
-  "requestMaxDurationMillis": 0,
+  "requestMinDurationMillis": 46155,
+  "requestMaxDurationMillis": 67319,
   "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 0,
-  "crawlerStartedAt": "2024-10-11T11:15:39.381Z",
+  "requestTotalFinishedDurationMillis": 169443,
+  "crawlerStartedAt": "2024-10-11T14:56:40.341Z",
   "crawlerFinishedAt": null,
-  "statsPersistedAt": "2024-10-11T11:21:39.459Z",
-  "crawlerRuntimeMillis": 360568,
-  "crawlerLastStartTimestamp": 1728645338891,
-  "requestRetryHistogram": [],
+  "statsPersistedAt": "2024-10-11T15:03:51.789Z",
+  "crawlerRuntimeMillis": 432324,
+  "crawlerLastStartTimestamp": 1728658599465,
+  "requestRetryHistogram": [
+    3
+  ],
   "statsId": 0,
   "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": null,
-  "requestTotalDurationMillis": 0,
-  "requestsTotal": 0,
+  "requestAvgFinishedDurationMillis": 56481,
+  "requestTotalDurationMillis": 169443,
+  "requestsTotal": 3,
   "requestsWithStatusCode": {
-    "200": 1
+    "200": 29
   },
   "errors": {},
   "retryErrors": {
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
+    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@apify\\src\\index.ts:88:74": {
       "missing error code": {
         "Error": {
-          "page.goto: net::ERR_TIMED_OUT at https://www.copyrightable.com/search/category/sound-recording-registration/page-a-1": {
-            "count": 17
+          "requestHandler timed out after 60 seconds.": {
+            "count": 26
           }
         }
       }
     },
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\src\\crawlers\\scrapper.service.ts:64:22": {
+    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
       "missing error code": {
         "Error": {
-          "page.goto: net::ERR_TIMED_OUT at https://www.copyrightable.com/search/category/sound-recording-registration/page-a-1": {
-            "count": 1
-          }
-        }
-      }
-    },
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\crawlers\\crawler_utils.ts:13:11": {
-      "missing error code": {
-        "Error": {
-          "Navigation timed out after 120 seconds.": {
-            "count": 1
+          "page.goto: net::ERR_EMPTY_RESPONSE at _": {
+            "count": 4
+          },
+          "page.goto: net::ERR_CERT_AUTHORITY_INVALID at _": {
+            "count": 4
+          },
+          "page.goto: net::ERR_CONNECTION_RESET at _": {
+            "count": 37
           }
         }
       }
