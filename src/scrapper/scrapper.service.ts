@@ -6,6 +6,7 @@ import { HttpsProxyAgent } from 'https-proxy-agent';
 import * as fs from 'fs';
 import * as path from 'path';
 import { createObjectCsvWriter } from 'csv-writer';
+import csv from 'csv-parser';
 
 @Injectable()
 export class ScraperService {
@@ -104,13 +105,27 @@ export class ScraperService {
         console.error(`Request ${request.url} failed too many times. Error: ${error}`);
       },
     });
+    const registrationNumbers = [];
+    fs.createReadStream('Sound Recording-reg-z.csv')
+      .pipe(csv())
+      .on('data', (row) => {
+    // Assuming your registration numbers are under the column 'reg_no'
+    if (row['Registration_no']) {
+      registrationNumbers.push(row['Registration_no']);
+    }
+  })
+  .on('end', () => {
+    console.log('CSV file successfully processed.');
+    console.log('Registration Numbers:', registrationNumbers);
+    // Now you can process the array of registration numbers
+  });
 
     const urls = registrationNumbers.map((arg) =>
       `https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search_Arg=${arg}&Search_Code=REGS&CNT=25&PID=dummy_pid&SEQ=12345678912345&SID=1`
     );
 
     console.log('Total links:', urls.length);
-    await crawler.run(urls);
+    //await crawler.run(urls);
   }
 
   async filterHealthyProxies() {
