@@ -6,11 +6,12 @@ import { HttpsProxyAgent } from 'https-proxy-agent';
 import * as fs from 'fs';
 import * as path from 'path';
 import { createObjectCsvWriter } from 'csv-writer';
-import csv from 'csv-parser';
+import * as csv from 'csv-parser';
+import { log } from 'console';
 
 @Injectable()
 export class ScraperService {
-  private filePath = path.join('', 'sound-recording-a.csv');
+  private filePath = path.join('', 'sound-recording-z.csv');
   private csvWriter = createObjectCsvWriter({
     append: true,
     path: this.filePath,
@@ -25,7 +26,7 @@ export class ScraperService {
       { id: 'rightsAndPermissions', title: 'Rights And Permission' },
     ],
   });
-
+  
   async fetchProxies() {
     const githubUrl = 'https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt';
     try {
@@ -34,7 +35,7 @@ export class ScraperService {
       return ipArray.map((ip: any) => `http://${ip}`);
     } catch (error) {
       console.error(`Failed to fetch proxy list: ${error.message}`);
-      return [];
+      return [];  
     }
   }
    
@@ -47,10 +48,11 @@ export class ScraperService {
 
     const crawler = new PlaywrightCrawler({
       useSessionPool: true,
+      proxyConfiguration,
       sessionPoolOptions: { maxPoolSize: 100 },
       persistCookiesPerSession: true,
       maxRequestRetries: 50,
-      maxConcurrency: 10,
+      maxConcurrency: 5,
       minConcurrency: 1,
       navigationTimeoutSecs: 120,
 
@@ -59,7 +61,7 @@ export class ScraperService {
         console.log('Using proxy:', proxyInfo?.url || 'No proxy');
 
         try {
-          await page.goto(request.url, { timeout: 6000000 });
+          await page.goto(request.url, { timeout: 60000 });
           await page.waitForLoadState('domcontentloaded');
         } catch (error) {
           console.error(`Failed to navigate to ${request.url}. Error: ${error.message}`);
@@ -75,9 +77,17 @@ export class ScraperService {
           { id: 'copyrightClaimant', selector: 'th:has-text("Copyright Claimant") + td' },
           { id: 'dateOfCreation', selector: 'th:has-text("Date of Creation") + td' },
         ];
-
+         
+         
+        const hrefValue = await page.evaluate(() => {
+          const anchor = Array.from(document.querySelectorAll('a')).find(el => el.textContent.trim() === '[ 1 ]');
+          return anchor ? anchor.getAttribute('href') : null;
+      });
+      console.log(page.content())
+      console.log("Href value: ",hrefValue)
         const data: any = {};
         for (const { id, selector } of selectors) {
+          page.waitForLoadState();
           const element = await page.$(selector);
           data[id] = element ? (await page.evaluate((el: any) => el.textContent, element)).trim() : 'N/A';
         }
@@ -97,7 +107,7 @@ export class ScraperService {
           Date Of Creation: ${data.dateOfCreation}
           Rights and Permissions: ${data.rightsAndPermissions}
         `);
-
+  
         await this.csvWriter.writeRecords([data]);
       }.bind(this),
 
@@ -105,27 +115,46 @@ export class ScraperService {
         console.error(`Request ${request.url} failed too many times. Error: ${error}`);
       },
     });
-    const registrationNumbers = [];
-    fs.createReadStream('Sound Recording-reg-z.csv')
-      .pipe(csv())
-      .on('data', (row) => {
-    // Assuming your registration numbers are under the column 'reg_no'
-    if (row['Registration_no']) {
-      registrationNumbers.push(row['Registration_no']);
-    }
-  })
-  .on('end', () => {
-    console.log('CSV file successfully processed.');
-    console.log('Registration Numbers:', registrationNumbers);
-    // Now you can process the array of registration numbers
-  });
+    const registrationNumbers=await (async () => {
+      
+      const registrationNumbers = [];
+      try {
+        await new Promise((resolve, reject) => {
+          fs.createReadStream('C:/Users/Moon Computers/Desktop/web-scrapper/Sound Recording-reg-z.csv')
+            .pipe(csv())
+            .on('data', (row) => {
+              if (row['Registration_no']) {
+                registrationNumbers.push(row['Registration_no']);
+              }
+            })
+            .on('end', () => {
+              console.log('CSV file successfully processed.');
+              resolve(
+                 registrationNumbers
+              ); // Resolve the promise when done
+            })
+            .on('error', (err) => {
+              console.error('Error reading the CSV file:', err);
+              reject(err); // Reject the promise on error
+            });
+        });
+    
+        console.log('Registration Numbers:', registrationNumbers);
+        // Now you can process the array of registration numbers here
+    
+      } catch (error) {
+        console.error('Error during CSV parsing:', error);
+      }
+        return registrationNumbers
+    })();
+    const  urls=[]
+for (let index = 0; index < registrationNumbers.length; index++) {
+      urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=${registrationNumbers[index]}&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1`)
+     }
 
-    const urls = registrationNumbers.map((arg) =>
-      `https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search_Arg=${arg}&Search_Code=REGS&CNT=25&PID=dummy_pid&SEQ=12345678912345&SID=1`
-    );
-
-    console.log('Total links:', urls.length);
-    //await crawler.run(urls);
+    console.log('Total links:', urls)
+  
+  await crawler.run(urls);  
   }
 
   async filterHealthyProxies() {

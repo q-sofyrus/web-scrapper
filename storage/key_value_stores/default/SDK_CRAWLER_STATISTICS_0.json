@@ -1,56 +1,58 @@
 {
-<<<<<<< HEAD
-  "requestsFinished": 12,
+  "requestsFinished": 29,
   "requestsFailed": 0,
-  "requestsRetries": 0,
+  "requestsRetries": 18,
   "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 12,
-  "requestMinDurationMillis": 16005,
-  "requestMaxDurationMillis": 20450,
+  "requestsFinishedPerMinute": 4,
+  "requestMinDurationMillis": 6910,
+  "requestMaxDurationMillis": 121203,
   "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 209083,
-  "crawlerStartedAt": "2024-10-14T07:02:10.860Z",
+  "requestTotalFinishedDurationMillis": 859638,
+  "crawlerStartedAt": "2024-10-14T11:12:02.653Z",
   "crawlerFinishedAt": null,
-  "statsPersistedAt": "2024-10-14T07:03:10.843Z",
-  "crawlerRuntimeMillis": 60606,
-  "crawlerLastStartTimestamp": 1728889330238,
+  "statsPersistedAt": "2024-10-14T11:19:02.695Z",
+  "crawlerRuntimeMillis": 423126,
+  "crawlerLastStartTimestamp": 1728904319569,
   "requestRetryHistogram": [
-    12
+    11,
+    18
   ],
   "statsId": 0,
   "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": 17424,
-  "requestTotalDurationMillis": 209083,
-  "requestsTotal": 12,
+  "requestAvgFinishedDurationMillis": 29643,
+  "requestTotalDurationMillis": 859638,
+  "requestsTotal": 29,
   "requestsWithStatusCode": {
-    "200": 18
-=======
-  "requestsFinished": 100,
-  "requestsFailed": 0,
-  "requestsRetries": 0,
-  "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 40,
-  "requestMinDurationMillis": 1835,
-  "requestMaxDurationMillis": 17967,
-  "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 563016,
-  "crawlerStartedAt": "2024-10-13T21:46:52.817Z",
-  "crawlerFinishedAt": "2024-10-13T21:49:22.068Z",
-  "statsPersistedAt": "2024-10-13T21:49:22.068Z",
-  "crawlerRuntimeMillis": 150851,
-  "crawlerLastStartTimestamp": 1728856011217,
-  "requestRetryHistogram": [
-    100
-  ],
-  "statsId": 0,
-  "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": 5630,
-  "requestTotalDurationMillis": 563016,
-  "requestsTotal": 100,
-  "requestsWithStatusCode": {
-    "200": 100
->>>>>>> 8260f4c904e72e1e49f63e72e6ca4df55634d0a9
+    "200": 33
   },
   "errors": {},
-  "retryErrors": {}
+  "retryErrors": {
+    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
+      "missing error code": {
+        "Error": {
+          "page.goto: net::ERR_TIMED_OUT at _": {
+            "count": 2
+          },
+          "page.goto: _ at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000882050&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1": {
+            "count": 2
+          },
+          "page.goto: net::ERR_EMPTY_RESPONSE at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000869367&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1": {
+            "count": 1
+          },
+          "page.goto: net::ERR_CONNECTION_RESET at _": {
+            "count": 54
+          }
+        }
+      }
+    },
+    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\browser-crawler.ts:697:19": {
+      "missing error code": {
+        "Error": {
+          "Detected a session error, rotating session... ": {
+            "count": 2
+          }
+        }
+      }
+    }
+  }
 }

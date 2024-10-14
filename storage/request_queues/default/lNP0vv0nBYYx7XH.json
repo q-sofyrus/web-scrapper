@@ -1,0 +1,9 @@
+{
+	"id": "lNP0vv0nBYYx7XH",
+	"json": "{\"id\":\"lNP0vv0nBYYx7XH\",\"url\":\"https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000890525&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1\",\"loadedUrl\":\"https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000890525&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1\",\"uniqueKey\":\"https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?CNT=25&HIST=1&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&Search_Arg=sr0000890525&Search_Code=REGS\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2024-10-14T11:14:48.281Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?CNT=25&HIST=1&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&Search_Arg=sr0000890525&Search_Code=REGS",
+	"url": "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000890525&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1"
+}
