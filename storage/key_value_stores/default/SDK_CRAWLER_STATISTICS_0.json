@@ -1,54 +1,29 @@
 {
-  "requestsFinished": 3,
+  "requestsFinished": 12,
   "requestsFailed": 0,
   "requestsRetries": 0,
   "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 0,
-  "requestMinDurationMillis": 46155,
-  "requestMaxDurationMillis": 67319,
+  "requestsFinishedPerMinute": 12,
+  "requestMinDurationMillis": 16005,
+  "requestMaxDurationMillis": 20450,
   "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 169443,
-  "crawlerStartedAt": "2024-10-11T14:56:40.341Z",
+  "requestTotalFinishedDurationMillis": 209083,
+  "crawlerStartedAt": "2024-10-14T07:02:10.860Z",
   "crawlerFinishedAt": null,
-  "statsPersistedAt": "2024-10-11T15:03:51.789Z",
-  "crawlerRuntimeMillis": 432324,
-  "crawlerLastStartTimestamp": 1728658599465,
+  "statsPersistedAt": "2024-10-14T07:03:10.843Z",
+  "crawlerRuntimeMillis": 60606,
+  "crawlerLastStartTimestamp": 1728889330238,
   "requestRetryHistogram": [
-    3
+    12
   ],
   "statsId": 0,
   "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": 56481,
-  "requestTotalDurationMillis": 169443,
-  "requestsTotal": 3,
+  "requestAvgFinishedDurationMillis": 17424,
+  "requestTotalDurationMillis": 209083,
+  "requestsTotal": 12,
   "requestsWithStatusCode": {
-    "200": 29
+    "200": 18
   },
   "errors": {},
-  "retryErrors": {
-    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@apify\\src\\index.ts:88:74": {
-      "missing error code": {
-        "Error": {
-          "requestHandler timed out after 60 seconds.": {
-            "count": 26
-          }
-        }
-      }
-    },
-    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
-      "missing error code": {
-        "Error": {
-          "page.goto: net::ERR_EMPTY_RESPONSE at _": {
-            "count": 4
-          },
-          "page.goto: net::ERR_CERT_AUTHORITY_INVALID at _": {
-            "count": 4
-          },
-          "page.goto: net::ERR_CONNECTION_RESET at _": {
-            "count": 37
-          }
-        }
-      }
-    }
-  }
+  "retryErrors": {}
 }
