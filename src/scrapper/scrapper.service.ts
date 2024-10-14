@@ -51,10 +51,10 @@ export class ScraperService {
       proxyConfiguration,
       sessionPoolOptions: { maxPoolSize: 100 },
       persistCookiesPerSession: true,
-      maxRequestRetries: 50,
-      maxConcurrency: 5,
+      maxRequestRetries: 20,
+      maxConcurrency: 100,
       minConcurrency: 1,
-      navigationTimeoutSecs: 120,
+      navigationTimeoutSecs: 240,
 
       requestHandler: async function({ page, request, proxyInfo }) {
         console.log('Scraping:', request.url);
@@ -83,7 +83,7 @@ export class ScraperService {
           const anchor = Array.from(document.querySelectorAll('a')).find(el => el.textContent.trim() === '[ 1 ]');
           return anchor ? anchor.getAttribute('href') : null;
       });
-      console.log(page.content())
+      console.log("html content--->>",await page.content())
       console.log("Href value: ",hrefValue)
         const data: any = {};
         for (const { id, selector } of selectors) {
@@ -120,7 +120,7 @@ export class ScraperService {
       const registrationNumbers = [];
       try {
         await new Promise((resolve, reject) => {
-          fs.createReadStream('C:/Users/Moon Computers/Desktop/web-scrapper/Sound Recording-reg-z.csv')
+          fs.createReadStream('C:/Users/qasim_ali/Desktop/web-scrapper/Sound Recording-reg-z.csv')
             .pipe(csv())
             .on('data', (row) => {
               if (row['Registration_no']) {
