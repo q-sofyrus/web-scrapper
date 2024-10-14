@@ -1,55 +1,29 @@
 {
-  "requestsFinished": 0,
+  "requestsFinished": 100,
   "requestsFailed": 0,
   "requestsRetries": 0,
   "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 0,
-  "requestMinDurationMillis": null,
-  "requestMaxDurationMillis": 0,
+  "requestsFinishedPerMinute": 40,
+  "requestMinDurationMillis": 1835,
+  "requestMaxDurationMillis": 17967,
   "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 0,
-  "crawlerStartedAt": "2024-10-11T11:15:39.381Z",
-  "crawlerFinishedAt": null,
-  "statsPersistedAt": "2024-10-11T11:21:39.459Z",
-  "crawlerRuntimeMillis": 360568,
-  "crawlerLastStartTimestamp": 1728645338891,
-  "requestRetryHistogram": [],
+  "requestTotalFinishedDurationMillis": 563016,
+  "crawlerStartedAt": "2024-10-13T21:46:52.817Z",
+  "crawlerFinishedAt": "2024-10-13T21:49:22.068Z",
+  "statsPersistedAt": "2024-10-13T21:49:22.068Z",
+  "crawlerRuntimeMillis": 150851,
+  "crawlerLastStartTimestamp": 1728856011217,
+  "requestRetryHistogram": [
+    100
+  ],
   "statsId": 0,
   "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": null,
-  "requestTotalDurationMillis": 0,
-  "requestsTotal": 0,
+  "requestAvgFinishedDurationMillis": 5630,
+  "requestTotalDurationMillis": 563016,
+  "requestsTotal": 100,
   "requestsWithStatusCode": {
-    "200": 1
+    "200": 100
   },
   "errors": {},
-  "retryErrors": {
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
-      "missing error code": {
-        "Error": {
-          "page.goto: net::ERR_TIMED_OUT at https://www.copyrightable.com/search/category/sound-recording-registration/page-a-1": {
-            "count": 17
-          }
-        }
-      }
-    },
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\src\\crawlers\\scrapper.service.ts:64:22": {
-      "missing error code": {
-        "Error": {
-          "page.goto: net::ERR_TIMED_OUT at https://www.copyrightable.com/search/category/sound-recording-registration/page-a-1": {
-            "count": 1
-          }
-        }
-      }
-    },
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\crawlers\\crawler_utils.ts:13:11": {
-      "missing error code": {
-        "Error": {
-          "Navigation timed out after 120 seconds.": {
-            "count": 1
-          }
-        }
-      }
-    }
-  }
+  "retryErrors": {}
 }

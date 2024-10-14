@@ -1,0 +1,51 @@
+{
+  "requestsFinished": 100,
+  "requestsFailed": 0,
+  "requestsRetries": 7,
+  "requestsFailedPerMinute": 0,
+  "requestsFinishedPerMinute": 5,
+  "requestMinDurationMillis": 461,
+  "requestMaxDurationMillis": 38235,
+  "requestTotalFailedDurationMillis": 0,
+  "requestTotalFinishedDurationMillis": 1137330,
+  "crawlerStartedAt": "2024-10-13T22:22:31.809Z",
+  "crawlerFinishedAt": "2024-10-13T22:41:57.344Z",
+  "statsPersistedAt": "2024-10-13T22:41:57.345Z",
+  "crawlerRuntimeMillis": 1167876,
+  "crawlerLastStartTimestamp": 1728858149469,
+  "requestRetryHistogram": [
+    93,
+    3,
+    4
+  ],
+  "statsId": 14,
+  "requestAvgFailedDurationMillis": null,
+  "requestAvgFinishedDurationMillis": 11373,
+  "requestTotalDurationMillis": 1137330,
+  "requestsTotal": 100,
+  "requestsWithStatusCode": {
+    "200": 99,
+    "500": 1
+  },
+  "errors": {},
+  "retryErrors": {
+    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
+      "missing error code": {
+        "Error": {
+          "page.goto: net::ERR_NETWORK_IO_SUSPENDED at _": {
+            "count": 5
+          }
+        }
+      }
+    },
+    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@apify\\src\\index.ts:88:74": {
+      "missing error code": {
+        "Error": {
+          "requestHandler timed out after 190 seconds _": {
+            "count": 5
+          }
+        }
+      }
+    }
+  }
+}
