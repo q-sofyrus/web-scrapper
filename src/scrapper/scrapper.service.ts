@@ -16,7 +16,7 @@ export class ScraperService {
     append: true,
     path: this.filePath,
     header: [
-      { id: 'name', title: 'Name(s)' },
+      { id: 'name', title: 'Name(s)' },  
       { id: 'email', title: 'Email' },
       { id: 'registrationNumber', title: 'Registration Number' },
       { id: 'title', title: 'Title' },
@@ -52,16 +52,16 @@ export class ScraperService {
       sessionPoolOptions: { maxPoolSize: 100 },
       persistCookiesPerSession: true,
       maxRequestRetries: 20,
-      maxConcurrency: 100,
+      maxConcurrency: 10,
       minConcurrency: 1,
-      navigationTimeoutSecs: 240,
+      navigationTimeoutSecs: 480,
 
       requestHandler: async function({ page, request, proxyInfo }) {
         console.log('Scraping:', request.url);
         console.log('Using proxy:', proxyInfo?.url || 'No proxy');
 
         try {
-          await page.goto(request.url, { timeout: 60000 });
+          await page.goto(request.url, { timeout: 480000 });
           await page.waitForLoadState('domcontentloaded');
         } catch (error) {
           console.error(`Failed to navigate to ${request.url}. Error: ${error.message}`);
@@ -79,12 +79,7 @@ export class ScraperService {
         ];
          
          
-        const hrefValue = await page.evaluate(() => {
-          const anchor = Array.from(document.querySelectorAll('a')).find(el => el.textContent.trim() === '[ 1 ]');
-          return anchor ? anchor.getAttribute('href') : null;
-      });
-      console.log("html content--->>",await page.content())
-      console.log("Href value: ",hrefValue)
+        
         const data: any = {};
         for (const { id, selector } of selectors) {
           page.waitForLoadState();
@@ -120,7 +115,7 @@ export class ScraperService {
       const registrationNumbers = [];
       try {
         await new Promise((resolve, reject) => {
-          fs.createReadStream('C:/Users/qasim_ali/Desktop/web-scrapper/Sound Recording-reg-z.csv')
+          fs.createReadStream('C:/Users/Moon Computers/Desktop/web-scrapper/Sound Recording-reg-z.csv')
             .pipe(csv())
             .on('data', (row) => {
               if (row['Registration_no']) {
@@ -148,8 +143,8 @@ export class ScraperService {
         return registrationNumbers
     })();
     const  urls=[]
-for (let index = 0; index < registrationNumbers.length; index++) {
-      urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=${registrationNumbers[index]}&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1`)
+for (let index = 366; index < 500; index++) {
+      urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search%5FArg=${registrationNumbers[index]}&Search%5FCode=REGS&CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1`)
      }
 
     console.log('Total links:', urls)

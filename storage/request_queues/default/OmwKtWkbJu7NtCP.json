@@ -1,0 +1,9 @@
+{
+	"id": "OmwKtWkbJu7NtCP",
+	"json": "{\"id\":\"OmwKtWkbJu7NtCP\",\"url\":\"https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search%5FArg=sr0000170936&Search%5FCode=REGS&CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1\",\"loadedUrl\":\"https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search%5FArg=sr0000170936&Search%5FCode=REGS&CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1\",\"uniqueKey\":\"https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1&Search_Arg=sr0000170936&Search_Code=REGS&ti=1%2C1&v1=1\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2024-10-14T15:03:26.572Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1&Search_Arg=sr0000170936&Search_Code=REGS&ti=1%2C1&v1=1",
+	"url": "https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search%5FArg=sr0000170936&Search%5FCode=REGS&CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1"
+}

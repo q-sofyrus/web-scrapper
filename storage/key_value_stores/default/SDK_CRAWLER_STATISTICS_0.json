@@ -1,155 +1,102 @@
 {
-<<<<<<< HEAD
-  "requestsFinished": 8,
+  "requestsFinished": 94,
   "requestsFailed": 0,
-  "requestsRetries": 6,
+  "requestsRetries": 79,
   "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 1,
-  "requestMinDurationMillis": 66152,
-  "requestMaxDurationMillis": 95754,
+  "requestsFinishedPerMinute": 3,
+  "requestMinDurationMillis": 2568,
+  "requestMaxDurationMillis": 83179,
   "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 623951,
-  "crawlerStartedAt": "2024-10-14T11:27:46.626Z",
+  "requestTotalFinishedDurationMillis": 2209311,
+  "crawlerStartedAt": "2024-10-14T14:36:03.432Z",
   "crawlerFinishedAt": null,
-  "statsPersistedAt": "2024-10-14T11:33:46.670Z",
-  "crawlerRuntimeMillis": 362717,
-  "crawlerLastStartTimestamp": 1728905263953,
+  "statsPersistedAt": "2024-10-14T15:05:03.725Z",
+  "crawlerRuntimeMillis": 1741225,
+  "crawlerLastStartTimestamp": 1728916562500,
   "requestRetryHistogram": [
-    2,
-    6
-  ],
-  "statsId": 0,
-  "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": 77994,
-  "requestTotalDurationMillis": 623951,
-  "requestsTotal": 8,
-  "requestsWithStatusCode": {
-    "200": 9
-=======
-  "requestsFinished": 4,
-  "requestsFailed": 1,
-  "requestsRetries": 5,
-  "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 0,
-  "requestMinDurationMillis": 62359,
-  "requestMaxDurationMillis": 77184,
-  "requestTotalFailedDurationMillis": 20164,
-  "requestTotalFinishedDurationMillis": 272856,
-  "crawlerStartedAt": "2024-10-14T12:04:15.203Z",
-  "crawlerFinishedAt": null,
-  "statsPersistedAt": "2024-10-14T12:19:15.639Z",
-  "crawlerRuntimeMillis": 914548,
-  "crawlerLastStartTimestamp": 1728907441091,
-  "requestRetryHistogram": [
-    null,
-    null,
-    null,
-    null,
-    4,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
-    null,
+    15,
+    14,
+    14,
+    13,
+    21,
+    7,
+    7,
+    1,
+    1,
     null,
     null,
     null,
     1
   ],
   "statsId": 0,
-  "requestAvgFailedDurationMillis": 20164,
-  "requestAvgFinishedDurationMillis": 68214,
-  "requestTotalDurationMillis": 293020,
-  "requestsTotal": 5,
+  "requestAvgFailedDurationMillis": null,
+  "requestAvgFinishedDurationMillis": 23503,
+  "requestTotalDurationMillis": 2209311,
+  "requestsTotal": 94,
   "requestsWithStatusCode": {
-    "200": 42,
-    "403": 3
->>>>>>> d9f364e8c3255f8dd39f109c45c7c40c8b987304
+    "200": 98
   },
-  "errors": {
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
-      "missing error code": {
-        "Error": {
-<<<<<<< HEAD
-          "page.goto: net::ERR_TIMED_OUT at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000899270&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1": {
-=======
-          "page.goto: net::ERR_TIMED_OUT at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000898078&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1": {
->>>>>>> d9f364e8c3255f8dd39f109c45c7c40c8b987304
-            "count": 1
-          }
-        }
-      }
-    }
-  },
+  "errors": {},
   "retryErrors": {
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
+    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
       "missing error code": {
         "Error": {
+          "page.goto: _ at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search%5FArg=sr0000264402&Search%5FCode=REGS&CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1": {
+            "count": 3
+          },
+          "page.goto: Target page, context or browser has been closed": {
+            "count": 2
+          },
           "page.goto: net::ERR_EMPTY_RESPONSE at _": {
-            "count": 18
+            "count": 14
           },
           "page.goto: net::ERR_TIMED_OUT at _": {
-            "count": 487
+            "count": 5
+          },
+          "page.goto: net::ERR_CERT_AUTHORITY_INVALID at _": {
+            "count": 9
           },
           "page.goto: net::ERR_CONNECTION_RESET at _": {
-            "count": 16
-<<<<<<< HEAD
-=======
-          },
-          "page.goto: net::ERR_CONNECTION_CLOSED at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000875616&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1": {
-            "count": 1
->>>>>>> d9f364e8c3255f8dd39f109c45c7c40c8b987304
+            "count": 253
           }
         }
       }
     },
-<<<<<<< HEAD
-    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\crawlers\\crawler_utils.ts:13:11": {
-      "missing error code": {
-        "Error": {
-          "Navigation timed out after 120 seconds.": {
-            "count": 6
-=======
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\crawlers\\crawler_utils.ts:13:11": {
-      "missing error code": {
-        "Error": {
-          "Navigation timed out after 240 seconds.": {
-            "count": 21
-          }
-        }
-      }
-    },
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\browser-crawler.ts:697:19": {
+    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\browser-crawler.ts:697:19": {
       "missing error code": {
         "Error": {
           "Detected a session error, rotating session... ": {
-            "count": 107
+            "count": 8
           }
         }
       }
     },
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\basic-crawler.ts:1093:19": {
+    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\src\\scrapper\\scrapper.service.ts:64:22": {
       "missing error code": {
         "Error": {
-          "Request blocked - received 403 status code.": {
-            "count": 3
+          "page.goto: net::ERR_CONNECTION_CLOSED at _": {
+            "count": 2
+          },
+          "page.goto: net::ERR_CONNECTION_RESET at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search%5FArg=sr0000717671&Search%5FCode=REGS&CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1": {
+            "count": 1
           }
         }
       }
     },
-    "C:\\Users\\qasim_ali\\Desktop\\web-scrapper\\src\\scrapper\\scrapper.service.ts:64:22": {
+    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@apify\\src\\index.ts:88:74": {
       "missing error code": {
         "Error": {
-          "page.goto: net::ERR_TIMED_OUT at _": {
-            "count": 19
->>>>>>> d9f364e8c3255f8dd39f109c45c7c40c8b987304
+          "requestHandler timed out after 60 seconds.": {
+            "count": 1
+          }
+        }
+      }
+    },
+    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\crawlers\\crawler_utils.ts:13:11": {
+      "missing error code": {
+        "Error": {
+          "Navigation timed out after 480 seconds.": {
+            "count": 20
           }
         }
       }
