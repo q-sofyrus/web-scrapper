@@ -2,34 +2,45 @@
 document.getElementById('scraperForm').addEventListener('submit', function(event) {
     // Allow the form to submit and navigate to the /progress route
     event.preventDefault(); // Prevent default form submission if you want to handle it manually
-
-     const category = document.getElementById('categoryInput').value;
+    console.log('we are inside script file...');
+    const category = document.getElementById('categoryInput').value;
     const alphabet = document.getElementById('alphabetInput').value;
-    const totalRecords = document.getElementById('totalRecordsInput').value;
+    const urlStart = document.getElementById('urlOffsetStart').value;
+    const urlEnd = document.getElementById('urlOffsetEnd').value;
+
+    console.log(category.toLowerCase(),alphabet.toLowerCase(),urlStart,urlEnd);
+    document.getElementById('spinnerContainer').innerText=''
+    const   element=document.createElement('div');
+        element.classList.add('spinner')
+        document.getElementById('spinnerContainer').appendChild(element);
 
     // Prepare the form data
-    const formData = new FormData();
-     formData.append('category', category);
-    formData.append('alphabet', alphabet);
-    formData.append('totalRecords', totalRecords);
+    makeRequest(category,alphabet,urlStart,urlEnd)
+})
 
-    // You can redirect to /progress directly:
-    const actionUrl = '/progress'; // Set the action URL for the form
-
-    // Create a new form submission to the action URL
-    const form = document.createElement('form');
-    form.method = 'GET'; // or POST if you intend to send data
-    form.action = actionUrl;
-
-    // Append the data
-    for (const [key, value] of formData.entries()) {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = key;
-        input.value = value;
-        form.appendChild(input);
+async  function makeRequest(category, alphabet,urlStart,urlEnd)
+{
+    alpha=['l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    try {
+        for(let i=0; i<15; i++){
+         response = await fetch(`/scrapper/fetch-registration?category=${encodeURIComponent(category)}&alpha=${encodeURIComponent(alpha[i])}&urlStart=${encodeURIComponent(urlStart)}&urlEnd=${encodeURIComponent(urlEnd)}`);
+        
+         setTimeout(() => {
+            console.log('This message will be logged after 5 seconds.');
+        }, 5000);
+        
+        }
+         if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        
+        const data = await response.json();
+        console.log('Received data:', data);
+        if(data){
+            document.getElementById('spinnerContainer').innerText='All registration numbers are fetched successfully!'
+            //document.getElementById('spinnerContainer').style.display='block'
+        }
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
     }
-
-    document.body.appendChild(form);
-    form.submit(); // Submit the form to navigate to the progress route
-});
+}

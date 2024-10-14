@@ -2,9 +2,11 @@
 import { Controller, Get, Render } from '@nestjs/common';
 import { AppService } from './app.service';
 
-@Controller()
+@Controller('app')
 export class AppController {
   constructor(private readonly appService: AppService) {}
+ 
+  
 
   @Get('scrapper')
   @Render('index')  // 'index' refers to 'index.hbs'
@@ -13,7 +15,7 @@ export class AppController {
   }
 
   @Get('progress')
-  @Render('progress')  // 'index' refers to 'index.hbs'
+  @Render('registration')  // 'index' refers to 'index.hbs'
   getHomePag() {
     console.log("successfully accessed");
     return { title: 'My Web Scrapper', description: 'Its a web scrapper ' };

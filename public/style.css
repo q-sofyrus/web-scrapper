@@ -1,5 +1,5 @@
-/* Reset some default browser styles */
-* {
+/* Reset some default browser styles*/
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,10 +11,19 @@ body {
     background-color: #f0f8ff;
     color: #333;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
     background: linear-gradient(135deg, #add8e6, #98fb98);
+}
+
+/* Heading styling */
+.heading {
+    font-size: 1.5rem;
+    color: #2e8b57;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
 /* Container styling */
@@ -26,15 +35,15 @@ body {
     max-width: 400px;
     width: 100%;
     text-align: center;
+    height: fit-content;
 }
 
-/* Heading */
+/* Form styling */
 h1 {
     margin-bottom: 1.5rem;
     color: #2e8b57;
 }
 
-/* Form group styling */
 .form-group {
     margin-bottom: 1rem;
     text-align: left;
@@ -47,7 +56,8 @@ label {
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+select {
     width: 100%;
     padding: 0.5rem;
     border: 1px solid #ccc;
@@ -70,3 +80,53 @@ button {
 button:hover {
     background-color: #3cb371;
 }
+
+.site {
+    font-size: large;
+}
+.heading{
+    font-weight: 700;
+    color: rgb(39, 147, 86);
+    font-size: xx-large;
+}
+
+
+/* Flexbox styling for form groups */
+.form-group {
+    margin-bottom: 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+ 
+/* Make form-group child inputs aligned */
+.form-group[style*="display: flex;"] > div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+/* Spinner styling*/
+
+/* Spinner styling */
+.spinner {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    border: 6px solid #f3f3f3; /* Light grey border */
+    border-top: 4px solid #2e8b57; /* Green color for the top border */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Spinner animation */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+ 
