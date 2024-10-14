@@ -1,55 +1,49 @@
 {
-  "requestsFinished": 29,
+  "requestsFinished": 8,
   "requestsFailed": 0,
-  "requestsRetries": 18,
+  "requestsRetries": 6,
   "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 4,
-  "requestMinDurationMillis": 6910,
-  "requestMaxDurationMillis": 121203,
+  "requestsFinishedPerMinute": 1,
+  "requestMinDurationMillis": 66152,
+  "requestMaxDurationMillis": 95754,
   "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 859638,
-  "crawlerStartedAt": "2024-10-14T11:12:02.653Z",
+  "requestTotalFinishedDurationMillis": 623951,
+  "crawlerStartedAt": "2024-10-14T11:27:46.626Z",
   "crawlerFinishedAt": null,
-  "statsPersistedAt": "2024-10-14T11:19:02.695Z",
-  "crawlerRuntimeMillis": 423126,
-  "crawlerLastStartTimestamp": 1728904319569,
+  "statsPersistedAt": "2024-10-14T11:33:46.670Z",
+  "crawlerRuntimeMillis": 362717,
+  "crawlerLastStartTimestamp": 1728905263953,
   "requestRetryHistogram": [
-    11,
-    18
+    2,
+    6
   ],
   "statsId": 0,
   "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": 29643,
-  "requestTotalDurationMillis": 859638,
-  "requestsTotal": 29,
+  "requestAvgFinishedDurationMillis": 77994,
+  "requestTotalDurationMillis": 623951,
+  "requestsTotal": 8,
   "requestsWithStatusCode": {
-    "200": 33
+    "200": 9
   },
   "errors": {},
   "retryErrors": {
     "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
       "missing error code": {
         "Error": {
-          "page.goto: net::ERR_TIMED_OUT at _": {
-            "count": 2
-          },
-          "page.goto: _ at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000882050&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1": {
-            "count": 2
-          },
-          "page.goto: net::ERR_EMPTY_RESPONSE at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000869367&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1": {
+          "page.goto: net::ERR_TIMED_OUT at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?Search_Arg=sr0000899270&Search_Code=REGS&PID=8-OxKAuCwQyTI_H3LcIsjLW009yM&SEQ=20241014064452&CNT=25&HIST=1": {
             "count": 1
           },
           "page.goto: net::ERR_CONNECTION_RESET at _": {
-            "count": 54
+            "count": 16
           }
         }
       }
     },
-    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\browser-crawler.ts:697:19": {
+    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\crawlers\\crawler_utils.ts:13:11": {
       "missing error code": {
         "Error": {
-          "Detected a session error, rotating session... ": {
-            "count": 2
+          "Navigation timed out after 120 seconds.": {
+            "count": 6
           }
         }
       }
