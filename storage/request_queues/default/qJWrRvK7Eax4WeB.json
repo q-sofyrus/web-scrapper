@@ -1,0 +1,9 @@
+{
+	"id": "qJWrRvK7Eax4WeB",
+	"json": "{\"id\":\"qJWrRvK7Eax4WeB\",\"url\":\"https://www.copyrightable.com/search/registrations?q=photographs&page=452\",\"loadedUrl\":\"https://www.copyrightable.com/search/registrations?q=photographs&page=452\",\"uniqueKey\":\"https://www.copyrightable.com/search/registrations?page=452&q=photographs\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2024-11-05T14:09:03.445Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.copyrightable.com/search/registrations?page=452&q=photographs",
+	"url": "https://www.copyrightable.com/search/registrations?q=photographs&page=452"
+}

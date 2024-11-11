@@ -43,7 +43,7 @@ export class MyService {
       // proxyConfiguration,
       persistCookiesPerSession: true,
       maxRequestRetries: 50,
-      maxConcurrency: 10,
+      maxConcurrency: 50,
       minConcurrency: 1,
       navigationTimeoutSecs: 120,
       requestHandler: async ({ page, request, proxyInfo }) => {

@@ -11,7 +11,7 @@ import { log } from 'console';
 
 @Injectable()
 export class ScraperService {
-  private filePath = path.join('', 'sound-recording-z.csv');
+  private filePath = path.join('', 'Visual-Material-data-new.csv');
   private csvWriter = createObjectCsvWriter({
     append: true,
     path: this.filePath,
@@ -51,10 +51,10 @@ export class ScraperService {
       proxyConfiguration,
       sessionPoolOptions: { maxPoolSize: 100 },
       persistCookiesPerSession: true,
-      maxRequestRetries: 20,
-      maxConcurrency: 10,
+      maxRequestRetries: 50,
+      maxConcurrency: 50,
       minConcurrency: 1,
-      navigationTimeoutSecs: 480,
+      navigationTimeoutSecs: 240,
 
       requestHandler: async function({ page, request, proxyInfo }) {
         console.log('Scraping:', request.url);
@@ -103,7 +103,11 @@ export class ScraperService {
           Rights and Permissions: ${data.rightsAndPermissions}
         `);
   
-        await this.csvWriter.writeRecords([data]);
+        
+        await this.csvWriter.writeRecords([data])
+              .then(() => console.log('Data written successfully'))
+              .catch((err) => console.error('Error writing data to CSV:', err));
+
       }.bind(this),
 
       failedRequestHandler: async ({ request, error }) => {
@@ -115,7 +119,7 @@ export class ScraperService {
       const registrationNumbers = [];
       try {
         await new Promise((resolve, reject) => {
-          fs.createReadStream('C:/Users/Moon Computers/Desktop/web-scrapper/Sound Recording-reg-z.csv')
+          fs.createReadStream('C:/Users/Moon Computers/Desktop/web-scrapper/Visual Material-reg-g.csv')
             .pipe(csv())
             .on('data', (row) => {
               if (row['Registration_no']) {
@@ -143,13 +147,12 @@ export class ScraperService {
         return registrationNumbers
     })();
     const  urls=[]
-for (let index = 366; index < 500; index++) {
+for (let index = 0; index < registrationNumbers.length; index++) {
       urls.push(`https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search%5FArg=${registrationNumbers[index]}&Search%5FCode=REGS&CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1`)
      }
 
-    console.log('Total links:', urls)
-  
-  await crawler.run(urls);  
+      console.log('Total links:', urls)
+      await crawler.run(urls);  
   }
 
   async filterHealthyProxies() {

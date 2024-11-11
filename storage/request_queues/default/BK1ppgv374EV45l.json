@@ -1,0 +1,9 @@
+{
+	"id": "BK1ppgv374EV45l",
+	"json": "{\"id\":\"BK1ppgv374EV45l\",\"url\":\"https://www.copyrightable.com/search/registrations?q=photographs&page=497\",\"loadedUrl\":\"https://www.copyrightable.com/search/registrations?q=photographs&page=497\",\"uniqueKey\":\"https://www.copyrightable.com/search/registrations?page=497&q=photographs\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2024-11-05T14:09:55.212Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://www.copyrightable.com/search/registrations?page=497&q=photographs",
+	"url": "https://www.copyrightable.com/search/registrations?q=photographs&page=497"
+}

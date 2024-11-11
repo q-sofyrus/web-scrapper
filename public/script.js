@@ -7,7 +7,7 @@ document.getElementById('scraperForm').addEventListener('submit', function(event
     const alphabet = document.getElementById('alphabetInput').value;
     const urlStart = document.getElementById('urlOffsetStart').value;
     const urlEnd = document.getElementById('urlOffsetEnd').value;
-
+    console.log("category- ",category)
     console.log(category.toLowerCase(),alphabet.toLowerCase(),urlStart,urlEnd);
     document.getElementById('spinnerContainer').innerText=''
     const   element=document.createElement('div');
@@ -15,15 +15,15 @@ document.getElementById('scraperForm').addEventListener('submit', function(event
         document.getElementById('spinnerContainer').appendChild(element);
 
     // Prepare the form data
-    makeRequest(category,alphabet,urlStart,urlEnd)
+      makeRequest(category,alphabet,urlStart,urlEnd)
 })
 
 async  function makeRequest(category, alphabet,urlStart,urlEnd)
 {
-    alpha=['l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    
     try {
         for(let i=0; i<15; i++){
-         response = await fetch(`/scrapper/fetch-registration?category=${encodeURIComponent(category)}&alpha=${encodeURIComponent(alpha[i])}&urlStart=${encodeURIComponent(urlStart)}&urlEnd=${encodeURIComponent(urlEnd)}`);
+         response = await fetch(`/scrapper/fetch-registration?category=${encodeURIComponent(category)}&alpha=${encodeURIComponent(alphabet)}&urlStart=${encodeURIComponent(urlStart)}&urlEnd=${encodeURIComponent(urlEnd)}`);
         
          setTimeout(() => {
             console.log('This message will be logged after 5 seconds.');

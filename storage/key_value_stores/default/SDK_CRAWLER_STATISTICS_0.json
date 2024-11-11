@@ -1,105 +1,29 @@
 {
-  "requestsFinished": 94,
+  "requestsFinished": 1000,
   "requestsFailed": 0,
-  "requestsRetries": 79,
+  "requestsRetries": 0,
   "requestsFailedPerMinute": 0,
-  "requestsFinishedPerMinute": 3,
-  "requestMinDurationMillis": 2568,
-  "requestMaxDurationMillis": 83179,
+  "requestsFinishedPerMinute": 47,
+  "requestMinDurationMillis": 1944,
+  "requestMaxDurationMillis": 35861,
   "requestTotalFailedDurationMillis": 0,
-  "requestTotalFinishedDurationMillis": 2209311,
-  "crawlerStartedAt": "2024-10-14T14:36:03.432Z",
-  "crawlerFinishedAt": null,
-  "statsPersistedAt": "2024-10-14T15:05:03.725Z",
-  "crawlerRuntimeMillis": 1741225,
-  "crawlerLastStartTimestamp": 1728916562500,
+  "requestTotalFinishedDurationMillis": 5171859,
+  "crawlerStartedAt": "2024-11-05T13:59:06.772Z",
+  "crawlerFinishedAt": "2024-11-05T14:20:28.971Z",
+  "statsPersistedAt": "2024-11-05T14:20:28.971Z",
+  "crawlerRuntimeMillis": 1285014,
+  "crawlerLastStartTimestamp": 1730815143957,
   "requestRetryHistogram": [
-    15,
-    14,
-    14,
-    13,
-    21,
-    7,
-    7,
-    1,
-    1,
-    null,
-    null,
-    null,
-    1
+    1000
   ],
   "statsId": 0,
   "requestAvgFailedDurationMillis": null,
-  "requestAvgFinishedDurationMillis": 23503,
-  "requestTotalDurationMillis": 2209311,
-  "requestsTotal": 94,
+  "requestAvgFinishedDurationMillis": 5172,
+  "requestTotalDurationMillis": 5171859,
+  "requestsTotal": 1000,
   "requestsWithStatusCode": {
-    "200": 98
+    "200": 1000
   },
   "errors": {},
-  "retryErrors": {
-    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\utils\\playwright-utils.ts:231:17": {
-      "missing error code": {
-        "Error": {
-          "page.goto: _ at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search%5FArg=sr0000264402&Search%5FCode=REGS&CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1": {
-            "count": 3
-          },
-          "page.goto: Target page, context or browser has been closed": {
-            "count": 2
-          },
-          "page.goto: net::ERR_EMPTY_RESPONSE at _": {
-            "count": 14
-          },
-          "page.goto: net::ERR_TIMED_OUT at _": {
-            "count": 5
-          },
-          "page.goto: net::ERR_CERT_AUTHORITY_INVALID at _": {
-            "count": 9
-          },
-          "page.goto: net::ERR_CONNECTION_RESET at _": {
-            "count": 253
-          }
-        }
-      }
-    },
-    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\internals\\browser-crawler.ts:697:19": {
-      "missing error code": {
-        "Error": {
-          "Detected a session error, rotating session... ": {
-            "count": 8
-          }
-        }
-      }
-    },
-    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\src\\scrapper\\scrapper.service.ts:64:22": {
-      "missing error code": {
-        "Error": {
-          "page.goto: net::ERR_CONNECTION_CLOSED at _": {
-            "count": 2
-          },
-          "page.goto: net::ERR_CONNECTION_RESET at https://cocatalog.loc.gov/cgi-bin/Pwebrecon.cgi?v1=1&ti=1,1&Search%5FArg=sr0000717671&Search%5FCode=REGS&CNT=25&PID=my-dummy-pid123&SEQ=12345698741253&SID=1": {
-            "count": 1
-          }
-        }
-      }
-    },
-    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@apify\\src\\index.ts:88:74": {
-      "missing error code": {
-        "Error": {
-          "requestHandler timed out after 60 seconds.": {
-            "count": 1
-          }
-        }
-      }
-    },
-    "C:\\Users\\Moon Computers\\Desktop\\web-scrapper\\node_modules\\@crawlee\\src\\crawlers\\crawler_utils.ts:13:11": {
-      "missing error code": {
-        "Error": {
-          "Navigation timed out after 480 seconds.": {
-            "count": 20
-          }
-        }
-      }
-    }
-  }
+  "retryErrors": {}
 }

@@ -2,9 +2,13 @@
 import { Controller, Get, Query} from '@nestjs/common';
 import { ScraperService } from './scrapper.service';
 import { MyService } from './my.service';
+import { CopyrightService } from './copyright.service';
 @Controller('scrapper')
 export class ScrapperController {
-  constructor(private readonly scrapperService: ScraperService,private readonly myservice:MyService) {}
+  constructor(private readonly scrapperService: ScraperService,
+    private readonly myservice:MyService,
+    private readonly copyrightService:CopyrightService
+  ) {}
   
   @Get('start')
   async scrape() {
@@ -12,6 +16,11 @@ export class ScrapperController {
     return 'records scrapped'
   }
 
+  @Get('links')
+  async scrape_links() {
+    await this.copyrightService.fetch_links();
+    return 'records scrapped'
+  }
 
   @Get('test-proxies')
   async testProxies() {
