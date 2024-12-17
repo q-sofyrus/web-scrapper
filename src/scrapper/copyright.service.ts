@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
-
+// this scrapper scrapes links under the view button from copyrightable.com, for a keyword 
+// to extract data from the same website
 import { Injectable } from '@nestjs/common';
 import { PlaywrightCrawler, ProxyConfiguration } from 'crawlee';
 import axios from 'axios';
@@ -7,11 +8,10 @@ import { HttpsProxyAgent } from 'https-proxy-agent';
 import * as fs from 'fs';
 import * as path from 'path';
 import { createObjectCsvWriter } from 'csv-writer';
+import * as csv from 'csv-parser';
 
 @Injectable()
 export class CopyrightService {
- 
-
   async fetchProxies() {
     const githubUrl = 'https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt';
     try {
@@ -24,10 +24,10 @@ export class CopyrightService {
     }
   }
 
-  async fetch_links(): Promise<object> {
+  async fetch_links():Promise<any>{
      
     // const filePath = path.join('', fileName);
-    const filePath='links.csv'
+    const filePath='Links-19-11-2024.csv'
     const csvWriter = createObjectCsvWriter({
       append: true,
       path: filePath,
@@ -92,47 +92,42 @@ export class CopyrightService {
     });
   
     const urls = [];
-    
-    for(let i=1; i<=1000; i++)
-      urls.push(`https://www.copyrightable.com/search/registrations?q=photographs&page=${i}`)
+const keywords=[]
+fs.createReadStream('keywords.csv')
+.pipe(csv())
+.on('data', (row: any) => {
+    // Assuming the CSV has only one column for keywords
+    const keyword= row['keyword']; // Get the keyword
+    keywords.push(keyword);
+})
+.on('end', () => {
+    console.log('CSV file successfully processed.');
+    console.log("keywords:",keywords)
+keywords.forEach(keyword => {
+  // URL encode the keyword (replace spaces with +)
+  const encodedKeyword = keyword.replace(/ /g, '+');
+  
+  for (let page = 31; page <= 50; page++) {
+      // Construct the URL
+      const url = `https://www.copyrightable.com/search/registrations?q=${encodedKeyword}&type_of_record=%5B%22visual_material_registration%22%5D&page=${page}`;
+      console.log(url);
+      urls.push(url)
+  }
+});
      
     console.log('Total links:', urls.length);
-    await crawler.run(urls);
-    return{'message': 'success'}
+   
+});
+
+// Generate URLs for each keyword and page from 1 to 100
+await crawler.run(urls);
+
+return{'message': 'success'}
+
   }
 
-  async filterHealthyProxies() {
-    console.log('Fetching proxies...');
-    const proxies = await this.fetchProxies();
-    const healthyProxies: string[] = [];
-    console.log('Filtering healthy proxies...');
-
-    for (const proxyUrl of proxies) {
-      const isHealthy = await this.isProxyHealthy(proxyUrl);
-      if (isHealthy) {
-        healthyProxies.push(proxyUrl);
-      }
-    }
-
-    console.log('Healthy proxies:', healthyProxies);
-    return healthyProxies;
-  }
-
-  async isProxyHealthy(proxyUrl: string): Promise<boolean> {
-    try {
-      const proxyAgent = new HttpsProxyAgent(proxyUrl);
-      const testResponse = await axios.get('https://www.google.com', {
-        httpAgent: proxyAgent,
-        httpsAgent: proxyAgent,
-        timeout: 5000,
-      });
-      return testResponse.status === 200;
-    } catch (error) {
-      console.error(`Proxy failed: ${proxyUrl} - Error: ${error.message}`);
-      await this.saveUrlToCSV(proxyUrl, 'failedUrls');
-      return false;
-    }
-  }
+ 
+ 
 
   async saveUrlToCSV(csvData: string, fileName: string): Promise<void> {
     const filePath = path.resolve(__dirname, `${fileName}.csv`);

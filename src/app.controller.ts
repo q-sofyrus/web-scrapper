@@ -20,6 +20,4 @@ export class AppController {
     console.log("successfully accessed");
     return { title: 'My Web Scrapper', description: 'Its a web scrapper ' };
   }
-
-   
 }

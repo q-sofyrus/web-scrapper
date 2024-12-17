@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+// this scrapper fetch registration numbers from the copyrightable.com  
 
 import { Injectable } from '@nestjs/common';
 import { PlaywrightCrawler, ProxyConfiguration } from 'crawlee';
@@ -11,7 +12,6 @@ import { createObjectCsvWriter } from 'csv-writer';
 @Injectable()
 export class MyService {
  
-
   async fetchProxies() {
     const githubUrl = 'https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt';
     try {
@@ -40,7 +40,7 @@ export class MyService {
     const crawler = new PlaywrightCrawler({
       useSessionPool: true,
       sessionPoolOptions: { maxPoolSize: 100 },
-      // proxyConfiguration,
+      // proxyConfiguration,    // uncomment for using proxies
       persistCookiesPerSession: true,
       maxRequestRetries: 50,
       maxConcurrency: 50,

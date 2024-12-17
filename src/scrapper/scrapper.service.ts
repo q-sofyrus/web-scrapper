@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+// this scrapper scrape  data using registration numbers  from usco website
 import { Injectable } from '@nestjs/common';
 import { PlaywrightCrawler, ProxyConfiguration } from 'crawlee';
 import axios from 'axios';
